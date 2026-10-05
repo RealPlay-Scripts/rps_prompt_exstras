@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MRI Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mri.css">
+</head>
+<body>
+    <div id="mri" class="hidden">
+        <div id="sheet">
+            <header>
+                <div class="brand">
+                    <svg class="logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 50 L20 18 L30 34 L40 10 L60 50" fill="none" stroke="#5ab4e6" stroke-width="4" stroke-linejoin="round"/>
+                        <path d="M26 44 h12 M32 38 v12" stroke="#e8f4fb" stroke-width="4" stroke-linecap="round"/>
+                    </svg>
+                    <div>
+                        <div class="h1" id="hosp"></div>
+                        <div class="h2" id="sub"></div>
+                        <div class="h3" id="dept"></div>
+                    </div>
+                </div>
+                <dl class="meta" id="meta-patient"></dl>
+                <dl class="meta" id="meta-study"></dl>
+                <button id="close" title="Close (ESC)">✕</button>
+            </header>
+
+            <section class="panels">
+                <figure class="panel">
+                    <div class="frame"><canvas class="view" id="v1" width="880" height="880"></canvas></div>
+                    <span class="rmark">R</span>
+                    <figcaption id="cap1"></figcaption>
+                </figure>
+                <figure class="panel">
+                    <div class="frame"><canvas class="view" id="v2" width="880" height="880"></canvas></div>
+                    <span class="rmark">R</span>
+                    <div class="note" id="note2"></div>
+                    <figcaption id="cap2"></figcaption>
+                </figure>
+                <figure class="panel">
+                    <div class="frame"><canvas class="view" id="v3" width="880" height="880"></canvas></div>
+                    <span class="rmark">R</span>
+                    <div class="note" id="note3"></div>
+                    <figcaption id="cap3"></figcaption>
+                </figure>
+                <div class="sweep"></div>
+            </section>
+
+            <section class="cols">
+                <div class="box">
+                    <h3 id="ftitle">FINDINGS</h3>
+                    <ul id="findings"></ul>
+                </div>
+                <div class="box">
+                    <h3>ADDITIONAL OBSERVATIONS</h3>
+                    <ul id="observations"></ul>
+                </div>
+            </section>
+
+            <section class="box conclusion">
+                <h3>CONCLUSION</h3>
+                <div class="concl-row">
+                    <ul id="conclusion"></ul>
+                    <div class="sign">
+                        <div class="sig" id="sig"></div>
+                        <div class="sig-line"></div>
+                        <b id="signame"></b>
+                        <span id="sigtitle"></span>
+                        <span id="sighosp"></span>
+                        <span id="sigdate"></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="mri.js"></script>
+</body>
+</html>
